@@ -20,9 +20,8 @@ for x in range(n):
         count+=1
     
       
-print('кол-во записей',count)
+print('кол-во записей',n)
 print('кол-во ошибок',errors)
 print('кол-во превышений порога',above_limit)
 print('максимальное показание',max)
-print('среднее показание',sum/count)
-cp
+print('среднее показание',round(sum/count,1))
