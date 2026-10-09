@@ -13,7 +13,9 @@ def winner(names,scores):
     return names[res]
 print(winner(names,scores))
 
-def average(scrores):
+def average(scores):
+    if not scores:
+        return 0.0
     res=sum(scores)/len(scores)
     return round(res,2)
 print(average(scores))
