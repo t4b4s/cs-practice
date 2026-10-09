@@ -9,7 +9,6 @@ for x in range(n):
     indication=input()
     if indication=='error':
         errors+=1
-        continue
     else:
         indication=float(indication)
         if indication>limit:
