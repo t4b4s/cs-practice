@@ -26,3 +26,12 @@ def above_average(names,scores):
             res.append(names[i])
     return res
 print(above_average(names,scores))
+
+def ranking(names,scores):
+    pairs=sorted(zip(scores, names),key=lambda p: p[0], reverse=True)
+    res=[]
+    for x,y in pairs:
+        res.append(y)
+    return res
+print(ranking(names,scores))
+
