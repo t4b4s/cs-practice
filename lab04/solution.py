@@ -1,39 +1,38 @@
 names = ['Аня', 'Боря', 'Вика']
 scores = [7.0, 9.0, 9.0]
+if __name__ == "__main__":
+    def winner(names,scores):
+        max=-10**10
+        i=-1
+        res=0
+        for x in scores:
+            i+=1
+            if x>max:
+                max=x
+                res=i
+        return names[res]
+    print(winner(names,scores))
 
-def winner(names,scores):
-    max=-10**10
-    i=-1
-    res=0
-    for x in scores:
-        i+=1
-        if x>max:
-            max=x
-            res=i
-    return names[res]
-print(winner(names,scores))
+    def average(scores):
+        if not scores:
+            return 0.0
+        res=sum(scores)/len(scores)
+        return round(res,2)
+    print(average(scores))
 
-def average(scores):
-    if not scores:
-        return 0.0
-    res=sum(scores)/len(scores)
-    return round(res,2)
-print(average(scores))
+    def above_average(names,scores):
+        res = []
+        avg = average(scores)
+        for i in range(len(names)):
+            if scores[i] > avg:
+                res.append(names[i])
+        return res
+    print(above_average(names,scores))
 
-def above_average(names,scores):
-    res = []
-    avg = average(scores)
-    for i in range(len(names)):
-        if scores[i] > avg:
-            res.append(names[i])
-    return res
-print(above_average(names,scores))
-
-def ranking(names,scores):
-    pairs=sorted(zip(scores, names),key=lambda p: p[0], reverse=True)
-    res=[]
-    for x,y in pairs:
-        res.append(y)
-    return res
-print(ranking(names,scores))
-
+    def ranking(names,scores):
+        pairs=sorted(zip(scores, names),key=lambda p: p[0], reverse=True)
+        res=[]
+        for x,y in pairs:
+            res.append(y)
+        return res
+    print(ranking(names,scores))
