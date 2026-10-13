@@ -4,7 +4,7 @@ def read_rows(lines):
     for line in lines:
         line=line.strip()
         if not line: continue
-
+        fields = [f.strip() for f in line.split(",")]
         if header is None:
             header=fields
             continue
