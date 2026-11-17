@@ -67,7 +67,7 @@ small_matrix[0, :] = -1
 small_matrix[1:, 1:] = 9
 print("Пример с матрицей:\n", small_matrix)
 
-# copy() создаёт отдельный массив: правки не затронут исходный hours.
+
 changed_hours = hours.copy()
 changed_hours[2:5] = 99
 changed_hours[::2] = -1
@@ -83,7 +83,7 @@ print("Исходная матрица:\n", matrix)
 
 print("\nЗадание 6. Изменение формы")
 numbers = np.arange(12)
-# В форме (3, 4) ровно 12 мест, а (5, 3) требует 15 элементов.
+
 table = numbers.reshape(3, 4)
 transposed = table.T
 print("numbers.shape:", numbers.shape)
